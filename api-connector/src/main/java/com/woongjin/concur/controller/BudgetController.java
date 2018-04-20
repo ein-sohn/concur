@@ -4,7 +4,6 @@ import javax.inject.Inject;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -23,9 +22,10 @@ public class BudgetController {
 	@Inject
 	private BudgetService budgetService;
 
-	@PostMapping(value="/event/v1.0/notify")
-	public String doPost(@RequestBody String params) {
-		return params;
-		//return budgetService.select(params);
+	@GetMapping(value="/event/v1.0/notify")
+	public String doPost() {
+		String xml = "레포트주소";
+		log.debug(xml);
+		return budgetService.select(xml);
 	}
 }

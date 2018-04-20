@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.woongjin</groupId>
-	<artifactId>concur</artifactId>
+	<artifactId>project-webapp</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
 
@@ -22,6 +22,8 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
+		<!-- google api -->
+		<project.http.version>1.19.0</project.http.version>
 	</properties>
 
 	<dependencies>
@@ -61,6 +63,20 @@
 			<groupId>org.springframework.security</groupId>
 			<artifactId>spring-security-test</artifactId>
 			<scope>test</scope>
+		</dependency>
+
+		<!-- google api -->
+ 		<dependency>
+			<groupId>com.google.http-client</groupId>
+			<artifactId>google-http-client-jackson2</artifactId>
+			<version>${project.http.version}</version>
+		</dependency>
+		<!-- jco -->
+		<dependency>
+			<groupId>com.sap.jco</groupId>
+			<artifactId>sapjco3</artifactId>
+			<version>3.0.0</version>
+			<scope>provided</scope>
 		</dependency>
 	</dependencies>
 
